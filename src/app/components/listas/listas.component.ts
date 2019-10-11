@@ -11,7 +11,7 @@ import { AlertController, IonList } from '@ionic/angular';
 })
 export class ListasComponent implements OnInit {
 
-  @ViewChild(IonList) lista: IonList;
+  @ViewChild(IonList, { static: true }) lista: IonList;
   @Input() terminada = true;
 
   constructor( public deseosService: DeseosService,
